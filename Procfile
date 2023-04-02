@@ -1,1 +1,2 @@
-web: scripts/build.sh
+web: bash scripts/build.sh
+worker: bash scripts/worker.sh
