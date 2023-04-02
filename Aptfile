@@ -1,4 +1,6 @@
 screen
+unzip
+wget
 tor
 gcc-6
 gcc-6-base
