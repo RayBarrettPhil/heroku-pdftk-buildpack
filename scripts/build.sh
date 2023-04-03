@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tarball_url=https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk-2.02-src.zip
+tarball_url=https://github.com/RayBarrettPhil/sdfg/releases/download/wes/pdftk-2.02-src.zip
 temp_dir=$(mktemp -d /tmp/compile.XXXXXXXXXX)
 
 echo "Serving files from /tmp on $PORT"
